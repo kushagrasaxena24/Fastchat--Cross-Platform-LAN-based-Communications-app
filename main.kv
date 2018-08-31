@@ -1,0 +1,42 @@
+<RootWidget>:
+
+    ActionBar:
+    
+        pos_hint: {'top':1}
+        ActionView:
+            use_separator: True
+            ActionPrevious:
+                title: 'Socializer App'
+                with_previous: False
+            ActionGroup:
+                text: 'Menu'
+                mode: 'spinner'
+                size_hint_x: 50
+                width: 250
+                ActionButton:
+                    text: 'Group Chat'
+                ActionButton:
+                    text: 'Data Transfer'
+                ActionButton:
+                    text: 'File Redundancy Check'
+                ActionButton:
+                    text: 'Quit'
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Welcome & Socialize'
+            font_size: 30
+        Image:
+            source: 'logo--script.jpg'
+            allow_stretch: True
+            keep_ratio: False
+           
+        BoxLayout:
+            Button:
+                text: 'Available Networks'
+                font_size: 30
+                on_release: app.root.current = 'second'
+            Button:
+                text: 'Broadcast MyIP'
+                font_size: 30
